@@ -1,16 +1,14 @@
 package com.bdd.Supermarket;
 
 public class Checkout {
-	//private int total = 0;
+	private int runningTotal = 0;
 	
-	public void add(int itemCount, int bananaPrice) {
-		/*for (int i = 0; i < itemCount; i++) {
-			total = total + bananaPrice;
-		}*/
+	public void add(int itemCount, int price) {
+		runningTotal += (itemCount * price);
 	}
 
 	public int total() {
-		return 40;
+		return runningTotal;
 	}
 
 }
