@@ -5,7 +5,6 @@ import org.junit.Test;
 import junit.framework.TestCase;
 
 public class CheckoutTest extends TestCase {
-	private int total = 0;
 	Checkout checkout = null;
 	
 	public CheckoutTest() {
@@ -21,7 +20,8 @@ public class CheckoutTest extends TestCase {
 	
 	@Test
 	public void testAddTwoItemsSamePrice() {
-		checkout.add(2, 30);
+		checkout.add(1, 30);
+		checkout.add(1, 30);
 		assertEquals(60, checkout.total());
 	}
 	
